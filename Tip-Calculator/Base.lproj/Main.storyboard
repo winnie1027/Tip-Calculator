@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,19 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U62-NY-UmA">
-                                <rect key="frame" x="40" y="215" width="334" height="32"/>
-                                <segments>
-                                    <segment title="15%"/>
-                                    <segment title="18%"/>
-                                    <segment title="20%"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fs0-KY-avM"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-oe-Zff">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-oe-Zff">
                                 <rect key="frame" x="40" y="286" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,19 +52,30 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U62-NY-UmA">
+                                <rect key="frame" x="40" y="218" width="334" height="32"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fs0-KY-avM"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RYK-RC-f6J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="11q-kz-JES"/>
                             <constraint firstItem="EN8-oe-Zff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="3Yq-J9-ocw"/>
-                            <constraint firstItem="U62-NY-UmA" firstAttribute="top" secondItem="nCw-0V-8lA" secondAttribute="bottom" constant="5" id="DJW-Rc-5AO"/>
+                            <constraint firstItem="U62-NY-UmA" firstAttribute="top" secondItem="nCw-0V-8lA" secondAttribute="bottom" constant="10" id="DJW-Rc-5AO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w6U-im-2FI" secondAttribute="trailing" constant="40" id="Hjv-vh-Nt4"/>
                             <constraint firstItem="RM1-rx-CCI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="JGQ-Kk-kne"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U62-NY-UmA" secondAttribute="trailing" constant="40" id="Lup-Qs-ogj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HNA-GZ-hxi" secondAttribute="trailing" constant="40" id="MYU-DW-oJc"/>
                             <constraint firstItem="RM1-rx-CCI" firstAttribute="leading" secondItem="RYK-RC-f6J" secondAttribute="trailing" constant="137" id="SkE-YY-T5O"/>
-                            <constraint firstItem="U62-NY-UmA" firstAttribute="top" secondItem="HNA-GZ-hxi" secondAttribute="bottom" constant="5" id="ZEb-0l-7Fh"/>
+                            <constraint firstItem="U62-NY-UmA" firstAttribute="top" secondItem="HNA-GZ-hxi" secondAttribute="bottom" constant="10" id="ZEb-0l-7Fh"/>
                             <constraint firstItem="w6U-im-2FI" firstAttribute="top" secondItem="U62-NY-UmA" secondAttribute="bottom" constant="40" id="fdV-2V-7fG"/>
                             <constraint firstItem="EN8-oe-Zff" firstAttribute="top" secondItem="U62-NY-UmA" secondAttribute="bottom" constant="40" id="gxM-63-vfI"/>
                             <constraint firstItem="RYK-RC-f6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nGb-ld-sS2"/>
@@ -90,7 +88,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="0lO-CS-QkT">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Wia-El-Mko">
-                            <color key="tintColor" red="0.31637338809999999" green="0.5749363837" blue="0.96743279699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="2N3-nx-9ax" kind="show" id="EfN-QP-Aqn"/>
                             </connections>
@@ -122,25 +119,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-Nd-j7Q">
-                                <rect key="frame" x="40" y="154" width="334" height="32"/>
+                                <rect key="frame" x="40" y="159" width="334" height="32"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="15%"/>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="settingDefaultTip:" destination="2N3-nx-9ax" eventType="valueChanged" id="H3F-TE-a3p"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zfn-EE-fO7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I1Z-69-Jkd" firstAttribute="top" secondItem="Zfn-EE-fO7" secondAttribute="top" constant="40" id="XeA-2y-OPY"/>
                             <constraint firstItem="Zfn-EE-fO7" firstAttribute="trailing" secondItem="vuj-Nd-j7Q" secondAttribute="trailing" constant="40" id="axA-cJ-92k"/>
                             <constraint firstItem="I1Z-69-Jkd" firstAttribute="leading" secondItem="Zfn-EE-fO7" secondAttribute="leading" constant="40" id="fBB-Z2-bn1"/>
-                            <constraint firstItem="vuj-Nd-j7Q" firstAttribute="top" secondItem="I1Z-69-Jkd" secondAttribute="bottom" constant="5" id="tJZ-i7-HRP"/>
+                            <constraint firstItem="vuj-Nd-j7Q" firstAttribute="top" secondItem="I1Z-69-Jkd" secondAttribute="bottom" constant="10" id="tJZ-i7-HRP"/>
                             <constraint firstItem="vuj-Nd-j7Q" firstAttribute="leading" secondItem="Zfn-EE-fO7" secondAttribute="leading" constant="40" id="tJg-8u-Xyp"/>
                         </constraints>
                     </view>
@@ -172,9 +168,4 @@
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

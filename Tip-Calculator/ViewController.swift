@@ -20,13 +20,14 @@ class ViewController: UIViewController {
         
         // Sets the title in the Navigation Bar
         self.title = "Tip Calculator"
-    }
-
-    @IBAction func calculateTip(_ sender: Any) {
+        
         let defaults = UserDefaults.standard
         
         let tipIndex = defaults.integer(forKey: "defaultTip")
-        tipControl.selectedSegmentIndex = tipIndex
+        self.tipControl.selectedSegmentIndex = tipIndex
+    }
+
+    @IBAction func calculateTip(_ sender: Any) {
         
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0   // if bill is nothing, set it to 0
