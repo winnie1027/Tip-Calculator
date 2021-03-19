@@ -17,9 +17,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Sets the title in the Navigation Bar
+        self.title = "Tip Calculator"
     }
 
     @IBAction func calculateTip(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        
+        let tipIndex = defaults.integer(forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = tipIndex
+        
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0   // if bill is nothing, set it to 0
         
@@ -32,8 +40,6 @@ class ViewController: UIViewController {
         tipAmountLabel.text = String(format: "$%.2f", tip)
         // Update total amount
         totalLabel.text = String(format: "$%.2f", total)
-        
-        
     }
     
 }
